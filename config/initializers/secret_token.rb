@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Dakshina::Application.config.secret_key_base = '1d286e6e6727e04fde459b0d4136aa4c20a447f4cc460fde5809a0669d9a23d248deac44628f0fca6936adaee1c9035f56d16d85a3930b2ec38b2b7730e61de2'
+Dakshina::Application.config.secret_key_base = '16d75afe16beec1c457f07e50a6066a50ef9c9aa66ab1d387ed20ef45ace6ff7db38fd590478e0f77d12874d5fd45296f7e52994c32d5d1bc72e002510c84504'
