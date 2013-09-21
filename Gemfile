@@ -40,3 +40,26 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'figaro'
+gem 'mongoid', '~> 4', :github=>"mongoid/mongoid"
+gem 'thin'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+  gem 'mongoid-rspec', '>= 1.6.0', :github=>"evansagge/mongoid-rspec"
+end
+
