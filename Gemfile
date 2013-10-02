@@ -33,3 +33,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Added for MongoDB
+# Refer: http://mongoid.org/en/mongoid/docs/installation.html
+gem "mongoid", "~> 3.0.0"
