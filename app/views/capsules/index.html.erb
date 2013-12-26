@@ -1,5 +1,7 @@
 <h1>List of Learning Capsules</h1>
 
+<%= link_to 'Create New Capsule', new_capsule_path %>
+
 <table>
   <tr>
     <th>Title</th>
@@ -12,4 +14,8 @@
         <td><%= capsule.description %></td>
       </tr>
   <% end %>
+
 </table>
+
+<%= link_to 'Home Page', welcome_index_path %>
+
