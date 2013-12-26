@@ -25,6 +25,21 @@ class CapsulesController < ApplicationController
     @capsules = Capsule.all
   end
 
+
+  def edit
+    @capsule = Capsule.find(params[:id])
+  end
+
+  def update
+    @capsule = Capsule.find(params[:id])
+
+    if @capsule.update(capsule_params)
+      redirect_to @capsule
+    else
+      render 'edit'
+    end
+  end
+
   private
   def capsule_params
     params.require(:capsule).permit(:title, :description)

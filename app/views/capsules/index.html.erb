@@ -6,12 +6,16 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @capsules.each do |capsule| %>
       <tr>
         <td><%= capsule.title %></td>
         <td><%= capsule.description %></td>
+        <td><%= link_to 'Show', capsule %></td>
+        <td><%= link_to 'Edit', edit_capsule_path(capsule) %></td>
       </tr>
   <% end %>
 
