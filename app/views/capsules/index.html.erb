@@ -1,0 +1,15 @@
+<h1>List of Learning Capsules</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @capsules.each do |capsule| %>
+      <tr>
+        <td><%= capsule.title %></td>
+        <td><%= capsule.description %></td>
+      </tr>
+  <% end %>
+</table>
