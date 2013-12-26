@@ -8,6 +8,7 @@
     <th>Description</th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
   <% @capsules.each do |capsule| %>
@@ -16,6 +17,8 @@
         <td><%= capsule.description %></td>
         <td><%= link_to 'Show', capsule %></td>
         <td><%= link_to 'Edit', edit_capsule_path(capsule) %></td>
+        <td><%= link_to 'Destroy', capsule_path(capsule),
+                        method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
 

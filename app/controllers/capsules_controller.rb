@@ -40,6 +40,15 @@ class CapsulesController < ApplicationController
     end
   end
 
+
+  def destroy
+    @capsule = Capsule.find(params[:id])
+    @capsule.destroy
+
+    redirect_to capsules_path
+  end
+
+
   private
   def capsule_params
     params.require(:capsule).permit(:title, :description)
