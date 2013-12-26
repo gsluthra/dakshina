@@ -1,0 +1,30 @@
+<% if @capsule.errors.any? %>
+    <div id="error_explanation" style="color: red">
+      <%= pluralize(@capsule.errors.count, "error") %> prohibited
+      this capsule from being saved:
+      <ul>
+        <% @capsule.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+<%= form_for @capsule do |f| %>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
