@@ -1,12 +1,18 @@
 class CapsulesController < ApplicationController
   def new
+    @capsule = Capsule.new
   end
 
   def create
     @capsule = Capsule.new(capsule_params)
 
-    @capsule.save
-    redirect_to @capsule
+    if @capsule.save
+      redirect_to @capsule
+    else
+      render 'new'
+    end
+
+
   end
 
 

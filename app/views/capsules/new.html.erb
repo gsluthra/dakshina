@@ -1,6 +1,20 @@
 <h1>Create a new Learning Capsule</h1>
 
 
+<% if @capsule.errors.any? %>
+    <div id="error_explanation" style="color: red">
+      <%= pluralize(@capsule.errors.count, "error") %> prohibited
+        this capsule from being saved:
+      <ul>
+        <% @capsule.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+
 <%= form_for :capsule, url: capsules_path do |f| %>
     <p>
       <%= f.label :title %><br>
