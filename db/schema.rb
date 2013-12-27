@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226084719) do
+ActiveRecord::Schema.define(version: 20131227083402) do
 
   create_table "capsules", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "study_text"
+    t.text     "assignment_instructions"
+    t.text     "guidelines_for_evaluators"
   end
 
 end

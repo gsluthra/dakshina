@@ -1,11 +1,36 @@
 <p>
-  <strong>Learning Capsule:</strong>
-  <%= @capsule.title %>
+  <h2><%=@capsule.title%></h2>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @capsule.description %>
 </p>
+
+
+<p>
+<h3> Study Material</h3>
+</p>
+
+<p>
+  <%= simple_format @capsule.study_text %>
+</p>
+
+<p>
+<h3> Assignment for Student </h3>
+</p>
+
+<p>
+  <%= simple_format @capsule.assignment_instructions %>
+</p>
+
+<p>
+<h3> Guidelines for Evaluators </h3>
+</p>
+
+<p>
+  <%= simple_format @capsule.guidelines_for_evaluators %>
+</p>
+
 
 <%= link_to 'Back', capsules_path %> | <%= link_to 'Edit', edit_capsule_path(@capsule) %>
