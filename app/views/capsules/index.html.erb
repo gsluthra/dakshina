@@ -1,28 +1,45 @@
-<h1>List of Learning Capsules</h1>
 
-<%= link_to 'Create New Capsule', new_capsule_path %>
+<div class="page-header">
+  <h1>Capsules</h1>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="panel panel-default">
+  <div class="panel-heading">List of Learning Capsules</div>
+  <div class="panel-body">
+    <p>The following capsules are currently defined in Dakshina. A Capsule represents the smallest learning unit in Dakshina
+       which a student can complete. A Capsule has Study material, Assignment Details and Evaluator Instructions associated
+       with it. You can then define Tracks (or Learning Paths) by choosing appropriate Capsules.</p>
+  </div>
 
-  <% @capsules.each do |capsule| %>
-      <tr>
-        <td><%= capsule.title %></td>
-        <td><%= capsule.description %></td>
-        <td><%= link_to 'Show', capsule %></td>
-        <td><%= link_to 'Edit', edit_capsule_path(capsule) %></td>
-        <td><%= link_to 'Destroy', capsule_path(capsule),
-                        method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
 
-</table>
+  <table class="table table-striped ">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
 
-<%= link_to 'Home Page', welcome_index_path %>
+    <% @capsules.each do |capsule| %>
+        <tr>
+          <td><%= capsule.title %></td>
+          <td><%= capsule.description %></td>
+          <td>
+            <%= link_to 'Show', capsule, :class=> "btn btn-primary" %>
+            <%= link_to 'Edit', edit_capsule_path(capsule) , :class=> "btn btn-warning" %>
+            <%= link_to 'Delete', capsule_path(capsule),
+                        method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger" %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+
+</div>
+
+<div align="center">
+  <%= link_to "< Home", welcome_index_path, :class=> "btn btn-primary" %>
+  <%= link_to "+ New Capsule", new_capsule_path, :class=> "btn btn-primary" %>
+</div>
+
+
+
 
