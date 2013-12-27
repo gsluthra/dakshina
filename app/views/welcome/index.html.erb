@@ -1,4 +1,13 @@
-<h1>Dakshina</h1>
-<p>Welcome to Dakshina Landing Page</p>
+<div class="jumbotron">
 
-<%= link_to "List of Capsules", controller: "capsules" %>
+  <h1>Dakshina</h1>
+  <p>
+    <span class="glyphicon glyphicon-gift"></span>
+    Welcome to Dakshina. Choose an option below.
+  </p>
+
+  <br/>
+  <%= link_to "Capsules", {:controller=> "capsules"}, :class=> "btn btn-primary btn-lg" %>
+</div>
+
+

@@ -15,5 +15,6 @@
 /log/*.log
 /tmp
 
-#[Gurpreet] Ignore idea IDE files
+#[Gurpreet]
 .idea/
+.DS_Store
