@@ -3,8 +3,10 @@
   <h1>Capsules</h1>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">List of Learning Capsules</div>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">List of Learning Capsules</h3>
+  </div>
   <div class="panel-body">
     <p>The following capsules are currently defined in Dakshina. A Capsule represents the smallest learning unit in Dakshina
        which a student can complete. A Capsule has Study material, Assignment Details and Evaluator Instructions associated
@@ -24,7 +26,7 @@
           <td><%= capsule.title %></td>
           <td><%= capsule.description %></td>
           <td>
-            <%= link_to 'Show', capsule, :class=> "btn btn-primary" %>
+            <%= link_to 'Show Details', capsule, :class=> "btn btn-primary" %>
             <%= link_to 'Edit', edit_capsule_path(capsule) , :class=> "btn btn-warning" %>
             <%= link_to 'Delete', capsule_path(capsule),
                         method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger" %>
