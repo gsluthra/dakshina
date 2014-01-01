@@ -2,7 +2,7 @@ dakshina
 ========
 
 Travis CI Build Status:
-
+[![Build Status](https://travis-ci.org/gsluthra/dakshina.png?branch=master)](https://travis-ci.org/gsluthra/dakshina)
 
 Gift to the Guru
 
