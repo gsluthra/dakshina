@@ -1,13 +1,20 @@
 <% if @capsule.errors.any? %>
-    <div id="error_explanation" style="color: red">
-      <%= pluralize(@capsule.errors.count, "error") %> prohibited
-      this capsule from being saved:
+
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Error!</strong>
+      <p>
+        <%= pluralize(@capsule.errors.count, "error") %> prohibited
+        this capsule from being saved:
       <ul>
         <% @capsule.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
         <% end %>
       </ul>
+      </p>
     </div>
+
+
 <% end %>
 
 
