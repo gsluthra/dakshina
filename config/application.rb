@@ -22,6 +22,10 @@ module Dakshina
 
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
 
+    # Added this line to remove the warning that was coming on console
+    # More information here: http://stackoverflow.com/questions/20361428/rails-i18n-validation-deprecation-warning
+    I18n.config.enforce_available_locales = true
+
   end
 end
 
