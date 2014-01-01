@@ -1,22 +1,4 @@
-<% if @capsule.errors.any? %>
-
-    <div class="alert alert-danger alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <strong>Error!</strong>
-      <p>
-        <%= pluralize(@capsule.errors.count, "error") %> prohibited
-        this capsule from being saved:
-      <ul>
-        <% @capsule.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-      </ul>
-      </p>
-    </div>
-
-
-<% end %>
-
+<%= render 'common/errorMessage', passedErrors: @capsule.errors %>
 
 <%= form_for @capsule do |f| %>
 
