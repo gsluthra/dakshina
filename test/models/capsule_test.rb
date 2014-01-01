@@ -13,6 +13,8 @@ class CapsuleTest < ActiveSupport::TestCase
   test "nil description should fail capsule save" do
       capsule = Capsule.new(:title=>"Some title", :description=>nil)
       assert_not capsule.save
+      assert capsule.invalid?
+      assert_not_nil capsule.errors.messages
   end
 
   test "title less than 3 characters should fail capsule save" do
@@ -28,6 +30,7 @@ class CapsuleTest < ActiveSupport::TestCase
   test "should save capsule if title and description are provided" do
       capsule = Capsule.new(:title=>"Some title", :description=>"Some description")
       assert capsule.save
+      assert capsule.valid?
   end
 
 end
