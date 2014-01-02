@@ -50,3 +50,5 @@ end
 
 
 gem 'slim' #slim templating
+
+gem 'simple_form'
