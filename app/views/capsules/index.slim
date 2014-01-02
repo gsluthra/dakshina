@@ -19,10 +19,11 @@
           td = capsule.title
           td = capsule.description
           td
-            =' link_to 'Show Details', capsule, :class=> "btn btn-primary"
-            =' link_to 'Edit', edit_capsule_path(capsule) , :class=> "btn btn-warning"
-            =' link_to 'Delete', capsule_path(capsule),  method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger"
+            .btn-toolbar
+              = link_to 'Show Details', capsule, :class=> "btn btn-primary"
+              = link_to 'Edit', edit_capsule_path(capsule) , :class=> "btn btn-warning"
+              = link_to 'Delete', capsule_path(capsule),  method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger"
 
-div align="center"
-  =' link_to "< Home", welcome_index_path, :class=> "btn btn-primary"
-  =' link_to "+ New Capsule", new_capsule_path, :class=> "btn btn-primary"
+div.btn-toolbar align="center"
+  = link_to "< Home", welcome_index_path, :class=> "btn btn-primary"
+  = link_to "+ New Capsule", new_capsule_path, :class=> "btn btn-primary"
