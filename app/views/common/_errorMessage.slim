@@ -1,0 +1,10 @@
+- if passedErrors.any?
+  .alert.alert-danger.alert-dismissable
+    button.close aria-hidden="true" data-dismiss="alert" type="button"
+    strong Error!
+    p
+      = pluralize(passedErrors.count, "error")
+      |  prohibited this form from being saved:
+      ul
+        - passedErrors.full_messages.each do |msg|
+          li = msg

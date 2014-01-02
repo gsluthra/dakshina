@@ -44,4 +44,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'turn', group: :test #for coloring rake test outputs
+group :test do
+  gem 'turn'   #for coloring rake test outputs
+end
+
+
+gem 'slim' #slim templating
