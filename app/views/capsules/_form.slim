@@ -1,0 +1,34 @@
+= render 'common/errorMessage', passedErrors: @capsule.errors
+= form_for @capsule do |f|
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title Capsule Details
+    .panel-body
+      p
+        = f.label "Name"
+        br
+        = f.text_field :title
+      p
+        = f.label :description
+        br
+        = f.text_area :description, size: "120x2"
+  .panel.panel-success
+    .panel-heading
+      h3.panel-title Study Material
+    .panel-body
+      = f.text_area :study_text, size: "120x10"
+  .panel.panel-success
+    .panel-heading
+      h3.panel-title Assignment for Student
+    .panel-body
+      = f.text_area :assignment_instructions, size: "120x3"
+  .panel.panel-success
+    .panel-heading
+      h3.panel-title Guidelines for Evaluators
+    .panel-body
+      = f.text_area :guidelines_for_evaluators, size: "120x3"
+
+  div.btn-toolbar align="left"
+    p
+    = link_to '< Back', @capsule, :class=> "btn btn-primary"
+    = f.submit 'Save Capsule', :class => 'btn btn-warning'
