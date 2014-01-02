@@ -5,33 +5,14 @@
 </div>
 
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title">Study Material</h3>
-  </div>
-  <div class="panel-body">
-    <%= simple_format @capsule.study_text %>
-  </div>
-</div>
+<%= render :partial => '/common/box',
+           :locals => { :title => 'Study Material', :body => simple_format(@capsule.study_text)} %>
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title">Assignment for Student</h3>
-  </div>
-  <div class="panel-body">
-    <%= simple_format @capsule.assignment_instructions %>
-  </div>
-</div>
+<%= render :partial => '/common/box',
+           :locals => { :title => 'Assignment for Student', :body => simple_format(@capsule.assignment_instructions)} %>
 
-
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title"> Guidelines for Evaluators </h3>
-  </div>
-  <div class="panel-body">
-    <%= simple_format @capsule.guidelines_for_evaluators %>
-  </div>
-</div>
+<%= render :partial => '/common/box',
+           :locals => { :title => 'Guidelines for Evaluators', :body => simple_format(@capsule.guidelines_for_evaluators)} %>
 
 
 <div align="left">
