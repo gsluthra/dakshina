@@ -44,10 +44,20 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
-  gem 'turn'   #for coloring rake test outputs
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
+group :test do
+  gem 'turn'   #for coloring rake test outputs
+  gem 'ffaker' #ffaker is a rewrite of faker and is faster that faker
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+end
 
 gem 'slim' #slim templating
 
