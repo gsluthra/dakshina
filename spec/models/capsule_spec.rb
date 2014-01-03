@@ -27,4 +27,10 @@ describe Capsule do
     build(:capsule, description: 'AAAAA').should be_valid
   end
 
+  it 'is invalid if title already exisits on another capsule' do
+    some_title = 'TDD'
+    create(:capsule, title: some_title).should be_valid
+    build(:capsule, title: some_title).should_not be_valid
+  end
+
 end
