@@ -42,35 +42,34 @@ describe CapsulesController do
 
   describe 'POST #create' do
 
-
     context 'with valid attributes' do
 
-      it 'creates a new capsule' do
-        expect {
-          post :create, capsule: attributes_for(:tdd_capsule)
-        }.to change(Capsule,:count).by(1)
-      end
+        it 'creates a new capsule' do
+          expect {
+            post :create, capsule: attributes_for(:tdd_capsule)
+          }.to change(Capsule,:count).by(1)
+        end
 
-      it 'redirects to the #show page' do
-        post :create, capsule: attributes_for(:tdd_capsule)
-        response.should redirect_to Capsule.last
-      end
+        it 'redirects to the #show page' do
+          post :create, capsule: attributes_for(:tdd_capsule)
+          response.should redirect_to Capsule.last
+        end
 
     end
 
 
     context 'with invalid attributes' do
 
-      it 'does not save the new capsule' do
-        expect {
-          post :create, capsule: attributes_for(:nil_title_capsule)
-        }.to_not change(Capsule,:count)
-      end
+        it 'does not save the new capsule' do
+          expect {
+            post :create, capsule: attributes_for(:nil_title_capsule)
+          }.to_not change(Capsule,:count)
+        end
 
-      it 're-renders the #new method' do
-        post :create, capsule: attributes_for(:nil_title_capsule)
-        response.should render_template :new
-      end
+        it 're-renders the #new method' do
+          post :create, capsule: attributes_for(:nil_title_capsule)
+          response.should render_template :new
+        end
 
     end
 
