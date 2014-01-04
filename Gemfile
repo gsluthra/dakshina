@@ -48,6 +48,9 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-stack_explorer'
 end
 
 group :test do
