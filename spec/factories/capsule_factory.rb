@@ -11,4 +11,8 @@ FactoryGirl.define do
     f.title 'TDD Intro'
     f.description 'TDD Introduction for students'
   end
+
+  factory :nil_title_capsule, parent: :capsule  do |f|
+    f.title nil
+  end
 end
