@@ -76,4 +76,55 @@ describe CapsulesController do
 
   end
 
+
+
+
+  describe 'PUT #update' do
+
+    before :each do
+      @saved_capsule = create(:tdd_capsule)
+    end
+
+    context 'Valid attributes' do
+      it 'changes the capsules attributes and redirects to updated capsule' do
+
+        NEW_TITLE = 'Updated title'
+        NEW_DESCRIPTION = 'Updated description'
+        NEW_STUDY_TEXT = 'New Study Text'
+
+        put :update, id: @saved_capsule.id,
+            capsule: attributes_for(:tdd_capsule, title: NEW_TITLE, description: NEW_DESCRIPTION, study_text: NEW_STUDY_TEXT)
+
+        @saved_capsule.reload
+        @saved_capsule.title.should eq(NEW_TITLE)
+        @saved_capsule.description.should eq(NEW_DESCRIPTION)
+        @saved_capsule.study_text.should eq(NEW_STUDY_TEXT)
+
+        response.should redirect_to @saved_capsule
+
+      end
+
+    end
+
+    context 'InValid attributes' do
+      it 'does not update the capsule and re-renders the edit method' do
+
+        put :update, id: @saved_capsule.id,
+            capsule: attributes_for(:nil_title_capsule)
+
+        @saved_capsule.reload
+        original_tdd_capsule = build(:tdd_capsule)
+        @saved_capsule.title.should eq(original_tdd_capsule.title)
+        @saved_capsule.description.should eq(original_tdd_capsule.description)
+        @saved_capsule.study_text.should eq(original_tdd_capsule.study_text)
+
+        response.should render_template :edit
+
+      end
+
+    end
+
+
+  end
+
 end
