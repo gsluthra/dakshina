@@ -39,7 +39,6 @@ describe CapsulesController do
   end
 
 
-
   describe 'POST #create' do
 
     context 'with valid attributes' do
@@ -75,8 +74,6 @@ describe CapsulesController do
 
 
   end
-
-
 
 
   describe 'PUT #update' do
@@ -124,6 +121,23 @@ describe CapsulesController do
 
     end
 
+
+  end
+
+
+  describe 'DELETE #destroy' do
+    before :each do
+      @saved_capsule = create(:tdd_capsule)
+    end
+
+    it 'deletes the Capsule and redirects to capsule listing page' do
+      expect {
+        delete :destroy, id: @saved_capsule.id
+      }.to change(Capsule, :count).by(-1)
+
+      response.should redirect_to capsules_url
+
+    end
 
   end
 
