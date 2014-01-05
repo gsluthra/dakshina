@@ -8,12 +8,12 @@ describe CapsulesController do
       capsule1 = create(:tdd_capsule)
       capsule2 = create(:tdd_capsule, title: 'SomeOtherTitle')
       get :index
-      assigns(:capsules).should eq([capsule1, capsule2])
+      expect(assigns(:capsules)).to eq([capsule1, capsule2])
     end
 
     it 'renders the :index view' do
       get :index
-      response.should render_template :index
+      expect(response).to render_template :index
     end
 
   end
@@ -27,13 +27,13 @@ describe CapsulesController do
 
     it 'populates the requested capsule into a @capsule' do
       get :show, id: @tdd_capsule.id
-      assigns(:capsule).should eq(@tdd_capsule)
+      expect(assigns(:capsule)).to eq(@tdd_capsule)
     end
 
 
     it 'renders the #show view' do
       get :show, id: @tdd_capsule.id
-      response.should render_template :show
+      expect(response).to render_template :show
     end
 
   end
@@ -51,7 +51,7 @@ describe CapsulesController do
 
         it 'redirects to the #show page' do
           post :create, capsule: attributes_for(:tdd_capsule)
-          response.should redirect_to Capsule.last
+          expect(response).to redirect_to Capsule.last
         end
 
     end
@@ -67,7 +67,7 @@ describe CapsulesController do
 
         it 're-renders the #new method' do
           post :create, capsule: attributes_for(:nil_title_capsule)
-          response.should render_template :new
+          expect(response).to render_template :new
         end
 
     end
@@ -93,11 +93,11 @@ describe CapsulesController do
             capsule: attributes_for(:tdd_capsule, title: NEW_TITLE, description: NEW_DESCRIPTION, study_text: NEW_STUDY_TEXT)
 
         @saved_capsule.reload
-        @saved_capsule.title.should eq(NEW_TITLE)
-        @saved_capsule.description.should eq(NEW_DESCRIPTION)
-        @saved_capsule.study_text.should eq(NEW_STUDY_TEXT)
+        expect(@saved_capsule.title).to eq(NEW_TITLE)
+        expect(@saved_capsule.description).to eq(NEW_DESCRIPTION)
+        expect(@saved_capsule.study_text).to eq(NEW_STUDY_TEXT)
 
-        response.should redirect_to @saved_capsule
+        expect(response).to redirect_to @saved_capsule
 
       end
 
@@ -111,11 +111,11 @@ describe CapsulesController do
 
         @saved_capsule.reload
         original_tdd_capsule = build(:tdd_capsule)
-        @saved_capsule.title.should eq(original_tdd_capsule.title)
-        @saved_capsule.description.should eq(original_tdd_capsule.description)
-        @saved_capsule.study_text.should eq(original_tdd_capsule.study_text)
+        expect(@saved_capsule.title).to eq(original_tdd_capsule.title)
+        expect(@saved_capsule.description).to eq(original_tdd_capsule.description)
+        expect(@saved_capsule.study_text).to eq(original_tdd_capsule.study_text)
 
-        response.should render_template :edit
+        expect(response).to render_template :edit
 
       end
 
@@ -135,7 +135,7 @@ describe CapsulesController do
         delete :destroy, id: @saved_capsule.id
       }.to change(Capsule, :count).by(-1)
 
-      response.should redirect_to capsules_url
+      expect(response).to redirect_to capsules_url
 
     end
 
