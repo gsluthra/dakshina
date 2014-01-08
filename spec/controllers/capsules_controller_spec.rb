@@ -21,20 +21,14 @@ describe CapsulesController do
 
   describe 'GET #show' do
 
+    let(:tdd_capsule) { create(:tdd_capsule) }
+
     before :each do
-      @tdd_capsule = create(:tdd_capsule)
+      get :show, id: tdd_capsule.id
     end
 
-    it 'populates the requested capsule into a @capsule' do
-      get :show, id: @tdd_capsule.id
-      expect(assigns(:capsule)).to eq(@tdd_capsule)
-    end
-
-
-    it 'renders the #show view' do
-      get :show, id: @tdd_capsule.id
-      expect(response).to render_template :show
-    end
+    it { expect(assigns(:capsule)).to eq(tdd_capsule) }
+    it { expect(response).to render_template :show }
 
   end
 
@@ -78,9 +72,7 @@ describe CapsulesController do
 
   describe 'PUT #update' do
 
-    before :each do
-      @saved_capsule = create(:tdd_capsule)
-    end
+    let (:saved_capsule) {create(:tdd_capsule)}
 
     context 'Valid attributes' do
       it 'changes the capsules attributes and redirects to updated capsule' do
@@ -89,15 +81,15 @@ describe CapsulesController do
         NEW_DESCRIPTION = 'Updated description'
         NEW_STUDY_TEXT = 'New Study Text'
 
-        put :update, id: @saved_capsule.id,
+        put :update, id: saved_capsule.id,
             capsule: attributes_for(:tdd_capsule, title: NEW_TITLE, description: NEW_DESCRIPTION, study_text: NEW_STUDY_TEXT)
 
-        @saved_capsule.reload
-        expect(@saved_capsule.title).to eq(NEW_TITLE)
-        expect(@saved_capsule.description).to eq(NEW_DESCRIPTION)
-        expect(@saved_capsule.study_text).to eq(NEW_STUDY_TEXT)
+        saved_capsule.reload
+        expect(saved_capsule.title).to eq(NEW_TITLE)
+        expect(saved_capsule.description).to eq(NEW_DESCRIPTION)
+        expect(saved_capsule.study_text).to eq(NEW_STUDY_TEXT)
 
-        expect(response).to redirect_to @saved_capsule
+        expect(response).to redirect_to saved_capsule
 
       end
 
@@ -106,14 +98,14 @@ describe CapsulesController do
     context 'InValid attributes' do
       it 'does not update the capsule and re-renders the edit method' do
 
-        put :update, id: @saved_capsule.id,
+        put :update, id: saved_capsule.id,
             capsule: attributes_for(:nil_title_capsule)
 
-        @saved_capsule.reload
+        saved_capsule.reload
         original_tdd_capsule = build(:tdd_capsule)
-        expect(@saved_capsule.title).to eq(original_tdd_capsule.title)
-        expect(@saved_capsule.description).to eq(original_tdd_capsule.description)
-        expect(@saved_capsule.study_text).to eq(original_tdd_capsule.study_text)
+        expect(saved_capsule.title).to eq(original_tdd_capsule.title)
+        expect(saved_capsule.description).to eq(original_tdd_capsule.description)
+        expect(saved_capsule.study_text).to eq(original_tdd_capsule.study_text)
 
         expect(response).to render_template :edit
 
