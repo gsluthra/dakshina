@@ -1,10 +1,8 @@
 .page-header
-  h1
+  h1 id="capsule-title-page"
     = @capsule.title
     br
     small = @capsule.description
-
-
 
 
 = render :partial => '/common/box', :locals => { :title => 'Study Material', :body => simple_format(@capsule.study_text)}
