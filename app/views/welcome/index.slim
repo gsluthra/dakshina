@@ -4,5 +4,7 @@
       span.glyphicon.glyphicon-gift
       | &nbsp; Welcome to Dakshina. Choose an option below.
     br
-    = link_to "Capsules", {:controller=> "capsules"}, :class=> "btn btn-primary btn-lg"
+    .btn-toolbar
+      = link_to "Learning Paths", {:controller=> "learning_paths"}, :class=> "btn btn-primary btn-lg"
+      = link_to "Capsules", {:controller=> "capsules"}, :class=> "btn btn-primary btn-lg"
 

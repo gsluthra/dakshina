@@ -1,5 +1,7 @@
 Dakshina::Application.routes.draw do
-  get "welcome/index"
+  resources :learning_paths
+
+  get 'welcome/index'
 
   resources :capsules
 

@@ -52,9 +52,9 @@ RSpec.configure do |config|
 
   # Disable the old 'should' syntax for now. People should switch over to new 'expect'.
   # See this blog: http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
-  end
+  #config.expect_with :rspec do |c|
+  #  c.syntax = :expect
+  #end
 
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227083402) do
+ActiveRecord::Schema.define(version: 20140111094920) do
 
   create_table "capsules", force: true do |t|
     t.string   "title"
@@ -21,6 +21,22 @@ ActiveRecord::Schema.define(version: 20131227083402) do
     t.text     "study_text"
     t.text     "assignment_instructions"
     t.text     "guidelines_for_evaluators"
+  end
+
+  create_table "learning_path_elements", force: true do |t|
+    t.integer  "learning_path_id"
+    t.integer  "capsule_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "learning_paths", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "objective"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
