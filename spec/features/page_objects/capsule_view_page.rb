@@ -18,5 +18,9 @@ class CapsuleViewPage
     expect(page).to have_content capsule[:guidelines_for_evaluators]
   end
 
+  def click_on_edit
+    click_link 'Edit'
+  end
+
 end
 
