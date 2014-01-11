@@ -16,7 +16,9 @@
         th
       - @capsules.each do |capsule|
         tr
-          td = capsule.title
+          td
+            =' image_tag 'capsule.ico'
+            = capsule.title
           td = capsule.description
           td
             .btn-toolbar

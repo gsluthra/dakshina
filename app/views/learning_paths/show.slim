@@ -5,7 +5,12 @@
 
 .panel.panel-info
   .panel-heading
-    h3.panel-title Details
+    h3.panel-title
+      |Details
+      div align='right'
+        = link_to 'Edit Details', edit_learning_path_path(@learning_path), :class=> 'btn btn-warning'
+
+
   .panel-body
     = @learning_path.description
     br
@@ -14,6 +19,27 @@
     br
     = @learning_path.objective
 
-div.btn-toolbar align="left"
-  = link_to "< Back", learning_paths_path, :class=> "btn btn-primary"
-  = link_to "Edit", edit_learning_path_path(@learning_path), :class=> "btn btn-warning"
+
+.panel.panel-info
+  .panel-heading
+    h3.panel-title
+      |Capsules in this Learning Path
+      div align='right'
+        = link_to 'Add Capsule', edit_learning_path_path(@learning_path), :class=> 'btn btn-warning'
+
+  .panel-body
+      table.table.table-hover
+        tr
+          th Title
+          th Description
+          th Approx Time (hours)
+        tr
+          td
+            =' image_tag 'capsule.ico'
+            |TDD
+          td Learn TDD the hard way
+          td 6
+
+div.btn-toolbar align='left'
+  = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary'
+
