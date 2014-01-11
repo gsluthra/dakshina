@@ -1,0 +1,18 @@
+.page-header
+  h1 id="learning-path-view-page"
+    = @learning_path.name
+
+.panel.panel-info
+  .panel-heading
+    h3.panel-title Details
+  .panel-body
+    = @learning_path.description
+    br
+    br
+    b Objective
+    br
+    = @learning_path.objective
+
+div.btn-toolbar align="left"
+  = link_to "< Back", learning_paths_path, :class=> "btn btn-primary"
+  = link_to "Edit", edit_learning_path_path(@learning_path), :class=> "btn btn-warning"

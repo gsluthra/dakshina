@@ -1,0 +1,17 @@
+= render 'common/errorMessage', passedErrors: @learning_path.errors
+= simple_form_for @learning_path, defaults: { input_html: { class: 'form-control' } } do |f|
+  .panel-group
+    .panel.panel-primary
+      .panel-heading
+        h3.panel-title Learning Path Details
+      .panel-body
+          = f.input :name
+          br
+          = f.input :description
+          br
+          = f.input :objective
+
+  p
+  div.btn-toolbar align="left"
+    = link_to '< Back', @learning_path, :class=> "btn btn-primary"
+    = f.submit 'Save Learning Path', :class => 'btn btn-warning'
