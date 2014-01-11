@@ -1,4 +1,6 @@
 .page-header
-    h1  = @learning_path.name
+    h1
+      =' @learning_path.name
+      span.glyphicon.glyphicon-road
 
 = render 'form'

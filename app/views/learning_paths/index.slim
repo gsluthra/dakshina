@@ -10,12 +10,15 @@
         | A Learning Path (or Track) is a series of Capsules which a student needs to undergo to gain reasonable knowledge about a subject.
     table.table.table-hover
       tr
+        th
         th Name
         th Description
         th Objective
         th
       - @learning_paths.each do |learning_path|
         tr
+          td
+            span.glyphicon.glyphicon-road
           td = learning_path.name
           td = learning_path.description
           td = learning_path.objective
