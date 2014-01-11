@@ -1,7 +1,7 @@
 .page-header
   h1 Learning Paths
 
-.panel.panel-success
+.panel.panel-info
   .panel-heading
     h3.panel-title List of Learning Paths
   .panel-body
@@ -12,11 +12,13 @@
       tr
         th Name
         th Description
+        th Objective
         th
       - @learning_paths.each do |learning_path|
         tr
           td = learning_path.name
           td = learning_path.description
+          td = learning_path.objective
           td
             .btn-toolbar
               = link_to 'Show Details', learning_path, :class=> "btn btn-primary"
