@@ -1,0 +1,588 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cap",
+				"capsules"
+			],
+			[
+				"render",
+				"render_template"
+			],
+			[
+				"selec",
+				"selection"
+			],
+			[
+				"ro",
+				"rotatedArray"
+			],
+			[
+				"to",
+				"to_s"
+			],
+			[
+				"ar",
+				"arrC"
+			],
+			[
+				"print",
+				"printarray"
+			],
+			[
+				"fina",
+				"final_name"
+			],
+			[
+				"midd",
+				"middle_name"
+			],
+			[
+				"fi",
+				"first_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/controllers/capsules_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1083,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/controllers/capsules_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 3278,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Status",
+				"View: Toggle Status Bar"
+			],
+			[
+				"git: statu",
+				"Git: Status"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git: check",
+				"Git: Checkout Current File"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git Di",
+				"Git: Diff Current File"
+			],
+			[
+				"Git:Stat",
+				"Git: Status"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Align",
+				"Preferences: Alignment Key Bindings – Default"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/gurpreetluthra/Projects/DakshinaSystem/dakshina/app/views/capsules/index.slim",
+		"/Users/gurpreetluthra/Projects/DakshinaSystem/dakshina/app/views/learning_paths/show.slim",
+		"/Users/gurpreetluthra/Projects/ICCChange/Adult_Intake_HTML_Form.html",
+		"/Users/gurpreetluthra/Projects/ICCChange/HIV_Form.html",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/main/MainController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/client/ClientDocumentController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/client/ViewClientController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/loanAccount/LoanDocumentController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/test/functional/demoTest.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/accounting/AccCoaController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/accounting/AccCreateGLAccountContoller.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/accounting/AccCreateRuleController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/accounting/AccEditGLAccountController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/controllers/centers/EditCenterController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/community-app/app/scripts/modules/configurations.js",
+		"/Users/gurpreetluthra/Projects/TWU/3_ArunKumarS/Review_Comments_ArunKumar.txt",
+		"/Users/gurpreetluthra/Documents/Recruitement/CodeReviews/80_Atul/pom.xml",
+		"/Users/gurpreetluthra/Projects/Camfed/sha_compare.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/vendor/gems/best_in_place-0.2.3/spec/integration/js_spec.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/app/controllers/mappings_controller.rb",
+		"/Users/gurpreetluthra/Documents/Recruitement/CodeReviews/78_Gaurav/Review_Comments.txt",
+		"/Users/gurpreetluthra/Projects/Camfed/app/controllers/homes_controller.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/Gemfile",
+		"/Users/gurpreetluthra/Projects/TWU/SandeshDS/Review_Comments",
+		"/Users/gurpreetluthra/Projects/TWU/Abhishek_Anand/Review_Comments.txt",
+		"/Users/gurpreetluthra/Projects/Camfed/Gemfile.lock",
+		"/Users/gurpreetluthra/Projects/Camfed/.rspec",
+		"/Users/gurpreetluthra/Projects/Camfed/.gitignore",
+		"/Users/gurpreetluthra/Projects/Camfed/vendor/gems/best_in_place-0.2.3/spec/integration/double_init_spec.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/lib/tasks/cron.rake",
+		"/Users/gurpreetluthra/Projects/Camfed/app/models/epi_surveyor/survey.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/spec/controllers/surveys_controller_spec.rb",
+		"/Users/gurpreetluthra/Projects/Camfed/app/views/import_histories/index.html.erb",
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/gurpreetluthra/Projects/Camfed/public/javascripts/surveys_index_jquery.js",
+		"/Users/gurpreetluthra/Projects/Camfed/.rvmrc",
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/User/Git.sublime-settings",
+		"/Users/gurpreetluthra/Documents/Campus/Mode_Version1.java",
+		"/Users/gurpreetluthra/Documents/Campus/Mode_Version2.java",
+		"/Users/gurpreetluthra/Documents/Campus/Mode_Version3.java",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/routes.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/html/start.html",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/html/login.html",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/services/AuthenticationService.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/loader.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/directives/OverlayDirective.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/stylesheets/mifosX_classes.less",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/stylesheets/mifosX.less",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/README.md",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/mifosXStyles.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/mifosX.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/mifosXComponents.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/controllers/LoginFormController.js",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/html/header.html",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/js/controllers/MainController.js",
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/gurpreetluthra/Library/Application Support/Sublime Text 2/Packages/Terminal/Base File.sublime-settings",
+		"/Users/gurpreetluthra/Projects/Bahmni_VM/bahmni-environment/puppet/manifests/configurations/stack-runtime-configuration.pp",
+		"/Users/gurpreetluthra/Projects/Bahmni_VM/bahmni-environment/puppet/manifests/deploy.pp",
+		"/Users/gurpreetluthra/Projects/Mifos/prototype-app/index.html",
+		"/Users/gurpreetluthra/Projects/Bahmni_VM/bahmni-environment/Vagrantfile",
+		"/Users/gurpreetluthra/Projects/Mifos/mifosx-community-apps/IndividualLendingGeneralJavaScript/IndivLendHome.html",
+		"/Users/gurpreetluthra/Projects/Mifos/mifosx-community-apps/IndividualLendingGeneralJavaScript/resources/IndividualLendingCode-1.26.js",
+		"/Users/gurpreetluthra/Projects/Mifos/mifosx-community-apps/IndividualLendingGeneralJavaScript/resources/IndividualLendingCode-1.0.css",
+		"/Users/gurpreetluthra/Documents/Recruitement/CodeReviews/64_Mayur_Mali/codeforreviewmayurmali/Conf.java",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/pages/login_page.vm",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/pages/student_profile_page.vm",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/pages/student_registration_page.vm",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/pages/students_list_page.vm",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/decorators/layout.jsp",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/main/webapp/WEB-INF/pages/welcome.vm",
+		"/Users/gurpreetluthra/Projects/FrontlineSMS/frontlineSMS-Translations/messages_Telugu_2.properties",
+		"/Users/gurpreetluthra/Projects/FrontlineSMS/frontlineSMS-Translations/messages_Arabic copy.properties",
+		"/Users/gurpreetluthra/Projects/Camfed/ReadMe.md",
+		"/Users/gurpreetluthra/Documents/SIP/FrontlineSMS/Translation Help/messages_Arabic.properties",
+		"/Users/gurpreetluthra/Desktop/TestArabic.txt",
+		"/Users/gurpreetluthra/Projects/Graphics/Fractal_Tree/tree_html5.html",
+		"/Users/gurpreetluthra/Projects/Placement/devtools/settings.xml",
+		"/Users/gurpreetluthra/Projects/Placement/code/pom.xml",
+		"/Users/gurpreetluthra/Projects/Placement/code/src/test/java/com/thoughtworks/placement/web/controllers/StudentsControllerTest.java",
+		"/Users/gurpreetluthra/.m2/repository/com/thoughtworks/placement/1.0-SNAPSHOT/placement-1.0-SNAPSHOT.pom",
+		"/Users/gurpreetluthra/Downloads/placement/pom.xml",
+		"/Users/gurpreetluthra/Projects/SpringApp/external/tomcat/6.0.35/Win64/conf/tomcat-users.xml",
+		"/Users/gurpreetluthra/Desktop/kd's_annotations_on_2364.feature",
+		"/Users/gurpreetluthra/Downloads/air_cko_trip_preferences_seat_preference.feature",
+		"/Users/gurpreetluthra/Downloads/buildmonitor/settings.json",
+		"/Users/gurpreetluthra/Desktop/kd's_annotations_on_2364",
+		"/Users/gurpreetluthra/Desktop/Notes for IPM.txt",
+		"/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/build.xml",
+		"/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/checkout.ui/src/com/expedia/www/checkout/ui/controller/TripPreferencesController.java",
+		"/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/checkout.ui/src/com/expedia/www/checkout/ui/controller/PaymentsController.java",
+		"/Users/gurpreetluthra/Personal/Guitar/Gurpreet_PLAY/Leaving On A Jet Plane.txt",
+		"/Users/gurpreetluthra/Personal/Guitar/Gurpreet_PLAY/Leaving On A Jet Plane.mht",
+		"/Users/gurpreetluthra/Personal/Guitar/Guitar_Class.txt",
+		"/Users/gurpreetluthra/Personal/Guitar/She Don't Like Roses.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"*.java",
+			"*.feature\n/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/*",
+			"*.feature\n/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/",
+			"*.feature\n/Users/gurpreetluthra/Projects/Expedia/code/www/expweb/trunk/ui/test/TFx/Automation/Ruby/Tests/EStar/cucumber-webdriver/projects/air_cko/features",
+			"*.feature\n*.feature"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getValue",
+			"reportable",
+			"5706",
+			"          <tr>\n            <td class=\"label\">ARV Adherence in the past week: </td>\n            <td><obs conceptId=\"1164\" style=\"radio\"/> </td>\n          </tr>\n\n",
+			"          <tr>\n            <td class=\"label\"> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"6004\" answerLabel=\"Burning/Numbness Tingling\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"135764\" answerLabel=\"Fat Changes\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"140501\" answerLabel=\"Fatigue\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"156046\" answerLabel=\"Dizzy\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"121543\" answerLabel=\"Anxiety\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"159426\" answerLabel=\"Nightmares\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"119537\" answerLabel=\"Depression\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"151\" answerLabel=\"Abdominal Pain\" style=\"checkbox\"/> </td>\n          </tr>\n",
+			"151",
+			"135764",
+			"142412",
+			"nausea",
+			"118789",
+			"139084",
+			"         <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"121629\" answerLabel=\"Anaemia\" style=\"checkbox\"/> </td>\n            <td class=\"spaced-out-td\"><obs conceptId=\"159935\" answerConceptId=\"142412\" answerLabel=\"Diarrhoea\" style=\"checkbox\"/> </td>\n   ",
+			"nested-td",
+			"inner-table",
+			"karnofsky",
+			"Anaemia",
+			"142412",
+			"139084",
+			"Headache",
+			"headache",
+			"161879",
+			"<tr>\n            <td class=\"label\">Temp:</td>\n            <td><obs conceptId=\"5088\" />[C&#176;]</td>\n          </tr>",
+			"presenting",
+			"obs",
+			"mens",
+			"pregnant",
+			"radio",
+			"required",
+			"td",
+			"Details",
+			"two-wide",
+			"paperFormId",
+			"a",
+			"demo.openmf.org",
+			"font",
+			"tabs",
+			"color_scheme",
+			"theme",
+			"sync_and_notify",
+			"UserAuthenticationStartEvent",
+			"this",
+			"NICE",
+			"replace",
+			"type",
+			"]\n",
+			" '+",
+			"print",
+			"function cos (angle) {\n	return Math.cos(deg_to_rad(angle));\n}\n \n",
+			"TripPreferences",
+			"preferences",
+			"trip preferences",
+			"credit card",
+			"credit",
+			"She don"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"spaced-out-td"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/capsules_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "spec/controllers/capsules_controller_spec.rb",
+					"settings":
+					{
+						"buffer_size": 3278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.480481624918,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 231.0
+	},
+	"output.find_results":
+	{
+		"height": 163.0
+	},
+	"output.git":
+	{
+		"height": 120.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"sli",
+				"app/views/capsules/index.slim"
+			],
+			[
+				"caps",
+				"app/controllers/capsules_controller.rb"
+			],
+			[
+				"spec",
+				"spec/controllers/capsules_controller_spec.rb"
+			],
+			[
+				"show.",
+				"app/views/learning_paths/show.slim"
+			],
+			[
+				"c",
+				"app/controllers/capsules_controller.rb"
+			],
+			[
+				"configura",
+				"app/scripts/modules/configurations.js"
+			],
+			[
+				"clientdco",
+				"app/scripts/controllers/client/ClientDocumentController.js"
+			],
+			[
+				"controller.js",
+				"app/scripts/controllers/main/MainController.js"
+			],
+			[
+				".js",
+				"vendor/gems/best_in_place-0.2.3/spec/integration/js_spec.rb"
+			],
+			[
+				".rb",
+				"sha_compare.rb"
+			],
+			[
+				".rd",
+				"vendor/gems/best_in_place-0.2.3/spec/integration/double_init_spec.rb"
+			],
+			[
+				"html",
+				"app/views/import_histories/index.html.erb"
+			],
+			[
+				"survey",
+				"spec/controllers/surveys_controller_spec.rb"
+			],
+			[
+				"js",
+				"public/javascripts/surveys_index_jquery.js"
+			],
+			[
+				"cron",
+				"lib/tasks/cron.rake"
+			],
+			[
+				"cron.",
+				"lib/tasks/cron.rake"
+			],
+			[
+				"o",
+				"js/directives/OverlayDirective.js"
+			],
+			[
+				"",
+				"html/header.html"
+			],
+			[
+				"lo",
+				"html/login.html"
+			],
+			[
+				"start",
+				"html/start.html"
+			],
+			[
+				"va",
+				"Vagrantfile"
+			],
+			[
+				"deplo",
+				"puppet/manifests/deploy.pp"
+			],
+			[
+				"buil",
+				"build.xml"
+			],
+			[
+				"156",
+				"ui/test/TFx/Automation/Ruby/Tests/EStar/cucumber-webdriver/projects/air_cko/features/air_cko_156_traveler_details_for_multi_travellers.feature"
+			],
+			[
+				"paycontrol",
+				"checkout.ui/src/com/expedia/www/checkout/ui/controller/PaymentsController.java"
+			],
+			[
+				"trippcontro",
+				"checkout.ui/src/com/expedia/www/checkout/ui/controller/TripPreferencesController.java"
+			],
+			[
+				"tripprefcon",
+				"checkout.ui/src/com/expedia/www/checkout/ui/controller/TripPreferencesController.java"
+			],
+			[
+				"ros",
+				"/Users/gurpreetluthra/Personal/Guitar/She Don't Like Roses.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 159.0,
+	"status_bar_visible": true
+}

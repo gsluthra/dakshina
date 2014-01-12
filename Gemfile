@@ -62,6 +62,6 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'slim' #slim templating
+gem 'slim-rails' #slim templating
 
 gem 'simple_form'
