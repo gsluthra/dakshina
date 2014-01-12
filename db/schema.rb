@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111094920) do
+ActiveRecord::Schema.define(version: 20140112160111) do
 
   create_table "capsules", force: true do |t|
     t.string   "title"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20140111094920) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "learning_path_elements", ["learning_path_id", "capsule_id"], name: "Unique_Capsule_In_Path_Index", unique: true
+  add_index "learning_path_elements", ["learning_path_id", "position"], name: "Unique_Position_In_Path_Index", unique: true
 
   create_table "learning_paths", force: true do |t|
     t.string   "name"
