@@ -33,12 +33,13 @@
           th Title
           th Description
           th Approx Time (hours)
-        tr
-          td
-            =' image_tag 'capsule.ico'
-            |TDD
-          td Learn TDD the hard way
-          td 6
+        - @learning_path.capsules.each do |c|
+          tr
+            td
+              =' image_tag 'capsule.ico'
+              = c.title
+            td = c.description
+            td 6
 
 div.btn-toolbar align='left'
   = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary'

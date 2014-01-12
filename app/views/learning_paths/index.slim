@@ -14,6 +14,7 @@
         th Name
         th Description
         th Objective
+        th Capsules
         th
       - @learning_paths.each do |learning_path|
         tr
@@ -22,6 +23,7 @@
           td = learning_path.name
           td = learning_path.description
           td = learning_path.objective
+          td = learning_path.capsules.count
           td
             .btn-toolbar
               = link_to 'Show Details', learning_path, :class=> "btn btn-primary"
