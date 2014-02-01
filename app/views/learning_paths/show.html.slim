@@ -1,3 +1,23 @@
+javascript:
+  $(function() {
+
+      // intiliaze the modal but don't show it yet
+      $("#bootstrapModal").modal('hide');
+
+      $('a[data-target="#bootstrapModal"]').click(function(event) {
+          event.preventDefault();
+          var myModal = $('#bootstrapModal');
+          modalBody = myModal.find('.modal-body');
+          //Set title for modal
+          myModal.find('.modal-title').text('Select Capsule')
+          // load content into modal
+          myModal.find('.modal-body').load('#{potential_capsules_path(@learning_path)}');
+          // display modal
+          myModal.modal('show');
+      });
+
+  });
+
 .page-header
   h1 id="learning-path-view-page"
     =' @learning_path.name
@@ -10,7 +30,6 @@
       div align='right'
         = link_to 'Edit Details', edit_learning_path_path(@learning_path), :class=> 'btn btn-warning'
 
-
   .panel-body
     = @learning_path.description
     br
@@ -20,12 +39,16 @@
     = @learning_path.objective
 
 
+= render 'common/bootstrap_modal'
+
 .panel.panel-info
   .panel-heading
     h3.panel-title
       |Capsules in this Learning Path
       div align='right'
-        = link_to 'Add Capsule', edit_learning_path_path(@learning_path), :class=> 'btn btn-warning'
+        a.btn.btn-primary href='#javascript will be triggered' data-toggle='modal' data-target='#bootstrapModal'
+          |Add Capsules
+
 
   .panel-body
       table.table.table-hover
@@ -43,4 +66,3 @@
 
 div.btn-toolbar align='left'
   = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary'
-

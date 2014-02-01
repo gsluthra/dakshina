@@ -5,6 +5,8 @@ Dakshina::Application.routes.draw do
 
   resources :capsules
 
+  get 'potential_capsules/:path_id' => 'learning_elements#potential_capsules_for_path', as: :potential_capsules
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
