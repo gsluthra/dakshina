@@ -16,6 +16,12 @@ javascript:
           myModal.modal('show');
       });
 
+     $('#bootstrapModal #saveButtonOnModal').click(function(e) {
+            e.preventDefault();
+            $('#bootstrapModal').modal('hide');
+            $('form').submit();
+        });
+
   });
 
 .page-header

@@ -15,4 +15,9 @@ class LearningElementsController < ApplicationController
     render :layout => !request.xhr?
   end
 
+
+  def add_capsules_to_path
+    puts 'add_capsules_to_path called!!'
+  end
+
 end

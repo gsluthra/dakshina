@@ -1,4 +1,4 @@
-= form_for @learning_path do
+= form_for @learning_path, :url => add_capsules_to_path_path, :method => :post do
   .panel.panel-primary
     .panel-heading
       h3.panel-title Choose capsules to add to learning path
