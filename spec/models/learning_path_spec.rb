@@ -13,6 +13,11 @@ describe LearningPath do
     expect(build(:dev_track, name: nil)).to_not be_valid
   end
 
+  it 'is invalid if name is less than 2 character' do
+    expect(build(:dev_track, name: 'A')).to_not be_valid
+    expect(build(:dev_track, name: 'AB')).to be_valid
+  end
+
   it 'is invalid if name already exists on another learning path' do
     some_title = 'QA Track'
     expect(create(:dev_track, name: some_title)).to be_valid
