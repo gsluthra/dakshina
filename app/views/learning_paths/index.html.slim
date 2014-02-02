@@ -26,11 +26,11 @@
           td = learning_path.capsules.count
           td
             .btn-toolbar
-              = link_to 'Show Details', learning_path, :class=> "btn btn-primary"
-              = link_to 'Edit', edit_learning_path_path(learning_path) , :class=> "btn btn-warning"
-              = link_to 'Delete', learning_path_path(learning_path),  method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger"
+              = link_to 'Show Details', learning_path, :class=> "btn btn-primary btn-xs"
+              = link_to 'Edit', edit_learning_path_path(learning_path) , :class=> "btn btn-warning btn-xs"
+              = link_to 'Delete', learning_path_path(learning_path),  method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-xs"
 
 div.btn-toolbar align="center"
-  = link_to "< Home", welcome_index_path, :class=> "btn btn-primary"
-  = link_to "+ New Learning Path", new_learning_path_path, :class=> "btn btn-primary"
+  = link_to "< Home", welcome_index_path, :class=> "btn btn-primary btn-sm"
+  = link_to "+ New Learning Path", new_learning_path_path, :class=> "btn btn-primary btn-sm"
 

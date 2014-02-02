@@ -28,7 +28,7 @@ javascript:
     h3.panel-title
       |Details
       div align='right'
-        = link_to 'Edit Details', edit_learning_path_path(@learning_path), :class=> 'btn btn-warning'
+        = link_to 'Edit Details', edit_learning_path_path(@learning_path), :class=> 'btn btn-primary btn-xs'
 
   .panel-body
     = @learning_path.description
@@ -46,7 +46,7 @@ javascript:
     h3.panel-title
       |Capsules in this Learning Path
       div align='right'
-        a.btn.btn-primary href='#javascript will be triggered' data-toggle='modal' data-target='#bootstrapModal'
+        a.btn.btn-primary.btn-xs href='#javascript will be triggered' data-toggle='modal' data-target='#bootstrapModal'
           |Add Capsules
 
 
@@ -65,4 +65,4 @@ javascript:
             td 6
 
 div.btn-toolbar align='left'
-  = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary'
+  = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary btn-sm'
