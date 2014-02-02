@@ -32,6 +32,42 @@ describe LearningPathsController do
   end
 
 
+  describe 'POST #create' do
+
+    context 'with valid attributes' do
+
+      it 'creates a new lerning path' do
+        expect {
+          post :create, learning_path: attributes_for(:dev_track)
+        }.to change(LearningPath,:count).by(1)
+      end
+
+      it 'redirects to the #show page' do
+        post :create, learning_path: attributes_for(:dev_track)
+        expect(response).to redirect_to LearningPath.last
+      end
+
+    end
+
+
+    context 'with invalid attributes' do
+
+      it 'does not save the new learning path' do
+        expect {
+          post :create, learning_path: attributes_for(:nil_name_track)
+        }.to_not change(LearningPath,:count)
+      end
+
+      it 're-renders the #new method' do
+        post :create, learning_path: attributes_for(:nil_name_track)
+        expect(response).to render_template :new
+      end
+
+    end
+
+
+  end
+
 
 
 end
