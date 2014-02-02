@@ -1,4 +1,19 @@
-ol
-  - @potential_capsules.each do |capsule|
-    li
-      = capsule.title
+= form_for @learning_path do
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title Choose capsules to add to learning path
+    .panel-body
+      table.table.table-hover
+        tr
+          th Select
+          th Title
+          th Time (hours)
+        - @potential_capsules.each do |c|
+          tr
+            td
+              = check_box_tag :capsule_ids, c.id, false, :name => 'learning_path[capsule_ids][]'
+            td
+              =' image_tag 'capsule.ico'
+              = c.title
+            td
+              | 6

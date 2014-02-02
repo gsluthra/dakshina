@@ -9,7 +9,7 @@ javascript:
           var myModal = $('#bootstrapModal');
           modalBody = myModal.find('.modal-body');
           //Set title for modal
-          myModal.find('.modal-title').text('Select Capsule')
+          myModal.find('.modal-title').text('#{@learning_path.name}')
           // load content into modal
           myModal.find('.modal-body').load('#{potential_capsules_path(@learning_path)}');
           // display modal
