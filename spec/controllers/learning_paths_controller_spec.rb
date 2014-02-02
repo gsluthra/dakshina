@@ -18,5 +18,20 @@ describe LearningPathsController do
 
   end
 
+  describe 'GET #show' do
+
+    let(:dev_track) { create(:dev_track) }
+
+    before :each do
+      get :show, id: dev_track.id
+    end
+
+    it { expect(assigns(:learning_path)).to eq(dev_track) }
+    it { expect(response).to render_template :show }
+
+  end
+
+
+
 
 end
