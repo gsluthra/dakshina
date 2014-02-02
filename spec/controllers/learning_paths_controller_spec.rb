@@ -115,6 +115,21 @@ describe LearningPathsController do
   end
 
 
+  describe 'DELETE #destroy' do
+    before :each do
+      @saved_path = create(:dev_track)
+    end
+
+    it 'deletes the Learning Path and redirects to path listing page' do
+      expect {
+        delete :destroy, id: @saved_path.id
+      }.to change(LearningPath, :count).by(-1)
+
+      expect(response).to redirect_to learning_paths_url
+
+    end
+
+  end
 
 
 
