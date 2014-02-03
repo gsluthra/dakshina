@@ -1,8 +1,9 @@
 class LearningElementsController < ApplicationController
 
+  before_action :get_learning_path
+
   def potential_capsules_for_path
 
-    @learning_path = LearningPath.find(params[:path_id])
     if @learning_path.capsules.count > 0
       @potential_capsules = Capsule.where('id not in (?)', @learning_path.capsules.map(&:id))
     else
@@ -17,26 +18,28 @@ class LearningElementsController < ApplicationController
 
 
   def add_capsules_to_path
-    puts 'add_capsules_to_path called!!'
-    @learning_path = LearningPath.find(params[:path_id])
-    capsules_hash = params[:learning_path]
-    puts capsules_hash.class
+    redirect_to @learning_path, notice: 'No updates were made to the path!' and return if (params[:learning_path].nil?)
 
-    if capsules_hash.nil?
-      redirect_to @learning_path, notice: 'No updates were made to the path!'
-      return
-    end
-
-    selected_capsules = Capsule.find capsules_hash[:capsule_ids]
     position = @learning_path.capsules.size + 1
+    selected_capsules = Capsule.find params[:learning_path][:capsule_ids]
 
     selected_capsules.each{ |capsule|
-      @learning_path.learning_path_elements.create(:capsule_id => capsule.id, :position => position)
+      @learning_path.learning_path_elements.build(:capsule_id => capsule.id, :position => position)
       position = position + 1
     }
 
-    redirect_to @learning_path, notice: 'Learning path was successfully updated.'
-
+    if(@learning_path.save)
+      redirect_to @learning_path, notice: 'Learning path was successfully updated.'
+    else
+      redirect_to @learning_path, error: 'Learning path could not be updated!'
     end
+
+  end
+
+  private
+
+      def get_learning_path
+        @learning_path = LearningPath.find(params[:path_id])
+      end
 
 end
