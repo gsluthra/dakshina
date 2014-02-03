@@ -18,7 +18,7 @@ class LearningElementsController < ApplicationController
 
 
   def add_capsules_to_path
-    redirect_to @learning_path, notice: 'No updates were made to the path!' and return if (params[:learning_path].nil?)
+    redirect_to @learning_path, alert: 'No updates were made to the path!' and return if (params[:learning_path].nil?)
 
     position = @learning_path.capsules.size + 1
     selected_capsules = Capsule.find params[:learning_path][:capsule_ids]
@@ -31,7 +31,7 @@ class LearningElementsController < ApplicationController
     if(@learning_path.save)
       redirect_to @learning_path, notice: 'Learning path was successfully updated.'
     else
-      redirect_to @learning_path, error: 'Learning path could not be updated!'
+      redirect_to @learning_path, alert: 'Learning path could not be updated!'
     end
 
   end
