@@ -39,7 +39,7 @@ class LearningElementsController < ApplicationController
   private
 
       def get_learning_path
-        @learning_path = LearningPath.find(params[:path_id])
+        @learning_path = LearningPath.find(params[:id])
       end
 
 end
