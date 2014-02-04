@@ -43,15 +43,27 @@ class CapsulesController < ApplicationController
 
   def destroy
     @capsule = Capsule.find(params[:id])
-    @capsule.destroy
 
-    redirect_to capsules_path
+    path_count = learning_paths_that_map_on_capsule @capsule.id
+
+    if (path_count>0)
+      redirect_to capsules_path, alert: "Cannot delete capsule #{@capsule.title} since it is being used in #{path_count} learning paths."
+      return
+    else
+      @capsule.destroy
+      redirect_to capsules_path, notice: 'Capsule deleted: '+ @capsule.title
+    end
+
   end
-
 
   private
-  def capsule_params
-    params.require(:capsule).permit(:title, :description, :study_text, :assignment_instructions, :guidelines_for_evaluators)
-  end
+    def capsule_params
+      params.require(:capsule).permit(:title, :description, :study_text, :assignment_instructions, :guidelines_for_evaluators)
+    end
+
+    def learning_paths_that_map_on_capsule(capsule_id)
+      LearningPathElement.where(:capsule_id => capsule_id).count
+    end
+
 
 end

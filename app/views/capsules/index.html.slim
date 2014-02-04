@@ -1,5 +1,8 @@
 .page-header
   h1 Capsules
+
+= render 'common/flashMessage'
+
 .panel.panel-success
   .panel-heading
     h3.panel-title List of Learning Capsules
@@ -24,7 +27,7 @@
             .btn-toolbar
               = link_to 'Show Details', capsule, :class=> "btn btn-primary btn-xs"
               = link_to 'Edit', edit_capsule_path(capsule) , :class=> "btn btn-warning btn-xs"
-              = link_to 'Delete', capsule_path(capsule),  method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-xs"
+              = link_to 'Delete', capsule_path(capsule),  method: :delete, data: { confirm: 'DELETE the capsule?' }, :class=> "btn btn-danger btn-xs"
 
 div.btn-toolbar align="center"
   = link_to "< Home", welcome_index_path, :class=> "btn btn-primary btn-sm"
