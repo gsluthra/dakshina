@@ -131,6 +131,18 @@ describe CapsulesController do
 
     end
 
+    it 'does not delete the Capsule if it is used in a learning path' do
+
+      expect {
+        @learning_path = create(:dev_track)
+        @learning_path.learning_path_elements.create(:capsule_id => @saved_capsule.id, :position => 1)
+        delete :destroy, id: @saved_capsule.id
+      }.to change(Capsule, :count).by(0)
+
+      expect(response).to redirect_to capsules_url
+      flash[:alert].should eq "Cannot delete capsule #{@saved_capsule.title} since it is being used in 1 learning paths."
+    end
+
   end
 
 end
