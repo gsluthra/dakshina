@@ -7,6 +7,7 @@ Dakshina::Application.routes.draw do
 
   get 'learning_paths/:id/potential_capsules' => 'learning_elements#potential_capsules_for_path', as: :potential_capsules
   post 'learning_paths/:id/add_capsules' => 'learning_elements#add_capsules_to_path', as: :add_capsules_to_path
+  delete 'learning_paths/:id/remove_capsule/:capsule_id' => 'learning_elements#remove_capsule_from_path', as: :remove_capsule_from_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -55,8 +55,9 @@ javascript:
     h3.panel-title
       |Capsules in this Learning Path
       div align='right'
-        a.btn.btn-primary.btn-xs href='#javascript will be triggered' data-toggle='modal' data-target='#bootstrapModal'
-          |Add Capsules
+        div.btn-toolbar
+          a.btn.btn-primary.btn-xs href='#javascript will be triggered' data-toggle='modal' data-target='#bootstrapModal'
+            |Add Capsules
 
 
   .panel-body
@@ -65,6 +66,7 @@ javascript:
           th Title
           th Description
           th Approx Time (hours)
+          th
         - @learning_path.capsules.each do |c|
           tr
             td
@@ -72,6 +74,8 @@ javascript:
               = c.title
             td = c.description
             td 6
+            td
+              = link_to ' ', remove_capsule_from_path_path(@learning_path, c), method: :delete, data: { confirm: 'Remove the capsule?' }, :class=> 'btn btn-warning btn-xs glyphicon glyphicon-remove'
 
 div.btn-toolbar align='left'
   = link_to '< Back', learning_paths_path, :class=> 'btn btn-primary btn-sm'

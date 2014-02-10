@@ -36,6 +36,14 @@ class LearningElementsController < ApplicationController
 
   end
 
+
+  def remove_capsule_from_path
+    puts 'capsule_id => '+ params[:capsule_id].to_s
+
+    redirect_to @learning_path, alert: 'No updates were made to the path!' and return if (params[:learning_path].nil?)
+  end
+
+
   private
 
       def get_learning_path
