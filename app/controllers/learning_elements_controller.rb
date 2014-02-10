@@ -38,9 +38,25 @@ class LearningElementsController < ApplicationController
 
 
   def remove_capsule_from_path
-    puts 'capsule_id => '+ params[:capsule_id].to_s
+    capsule_id_to_remove = params[:capsule_id].to_s
+    position = -1
+    deleted_successfully = false
+    @learning_path.learning_path_elements.each { |element|
+      if (element.capsule_id.equal? capsule_id_to_remove.to_i)
+        position = element.position
+        if element.destroy
+          deleted_successfully = true
+        end
+      end
+    }
 
-    redirect_to @learning_path, alert: 'No updates were made to the path!' and return if (params[:learning_path].nil?)
+    redirect_to @learning_path, alert: 'No updates were made to the path! Delete failed' and return unless deleted_successfully
+
+    @learning_path.reload
+
+    update_positions_for_remaining_capsules(position)
+
+    redirect_to @learning_path, notice: 'Capsule removed from path!'
   end
 
 
@@ -49,5 +65,17 @@ class LearningElementsController < ApplicationController
       def get_learning_path
         @learning_path = LearningPath.find(params[:id])
       end
+
+      def update_positions_for_remaining_capsules(position)
+        @learning_path.learning_path_elements.each { |element|
+          current_position = element.position
+          if current_position > position
+            element.position = position
+            position = position + 1
+            element.save!
+          end
+        }
+      end
+
 
 end
