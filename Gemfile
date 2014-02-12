@@ -60,6 +60,7 @@ group :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 gem 'slim-rails' #slim templating
