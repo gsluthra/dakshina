@@ -96,6 +96,7 @@ GEM
     multi_json (1.8.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    pg (0.18.4)
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -212,6 +213,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy
+  pg
   pry
   pry-nav
   pry-stack_explorer
